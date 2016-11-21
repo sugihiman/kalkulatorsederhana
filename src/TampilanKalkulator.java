@@ -233,7 +233,11 @@ display.setText(angka);
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btntambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntambahActionPerformed
-        // TODO add your handling code here:
+angka1=Double.parseDouble(angka);
+display.setText("+");
+angka="";
+pilih=1;
+
     }//GEN-LAST:event_btntambahActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
@@ -267,7 +271,11 @@ display.setText(angka);
     }//GEN-LAST:event_btn6ActionPerformed
 
     private void btnkurangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnkurangActionPerformed
-        // TODO add your handling code here:
+angka1=Double.parseDouble(angka);
+display.setText("-");
+angka="";
+pilih=2;
+
     }//GEN-LAST:event_btnkurangActionPerformed
 
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
@@ -289,19 +297,34 @@ display.setText(angka);
     }//GEN-LAST:event_btn9ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
+angka1=Double.parseDouble(angka);
+display.setText("*");
+angka="";
+pilih=3;
+
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void btnbagiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbagiActionPerformed
-        // TODO add your handling code here:
+angka1=Double.parseDouble(angka);
+display.setText("/");
+angka="";
+pilih=4;
+
     }//GEN-LAST:event_btnbagiActionPerformed
 
     private void btnhapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnhapusActionPerformed
-        // TODO add your handling code here:
+display.setText("");
+angka1=0.0;
+angka2=0.0;
+jumlah=0.0;
+angka="";
+
     }//GEN-LAST:event_btnhapusActionPerformed
 
     private void btntitikActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntitikActionPerformed
-        // TODO add your handling code here:
+
+angka += ".";
+display.setText(angka);
     }//GEN-LAST:event_btntitikActionPerformed
 
     private void btn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn0ActionPerformed
@@ -311,11 +334,40 @@ display.setText(angka);
     }//GEN-LAST:event_btn0ActionPerformed
 
     private void btntambahkurangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntambahkurangActionPerformed
-        // TODO add your handling code here:
+angka += "-";
+display.setText(angka);
+
     }//GEN-LAST:event_btntambahkurangActionPerformed
 
     private void btnsamadenganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsamadenganActionPerformed
-        // TODO add your handling code here:
+switch(pilih){
+        case 1:
+            angka2 = Double.parseDouble(angka);
+            jumlah = angka1 + angka2;
+            angka = Double.toString(jumlah);
+            display.setText(angka);
+            break;
+        case 2:
+            angka2 = Double.parseDouble(angka);
+            jumlah = angka1 - angka2;
+            angka = Double.toString(jumlah);
+            display.setText(angka);
+            break;
+        case 3:
+            angka2 = Double.parseDouble(angka);
+            jumlah = angka1 * angka2;
+            angka = Double.toString(jumlah);
+            display.setText(angka);
+            break;
+        case 4:
+            angka2 = Double.parseDouble(angka);
+            jumlah = angka1 / angka2;
+            angka = Double.toString(jumlah);
+            display.setText(angka);
+            break;
+            default:
+            break;
+
     }//GEN-LAST:event_btnsamadenganActionPerformed
 
     /**
